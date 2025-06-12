@@ -49,9 +49,9 @@
                     <div class="description-block">
                         <h3>Commentaire</h3>
                         <p>
-                            La figure présentée est une capture d’écran d’une interface de développement dans un projet web conçu avec le framework Flask en Python, réalisé en équipe dans le cadre d’un projet de type administration d’articles pour un site de vente de meubles. Ce module permet à un administrateur de consulter les commentaires associés à un article donné, en extraire les informations principales, et afficher un récapitulatif directement dans une page HTML dynamique.</p>
+                            La figure 1 est une capture d’écran d’une interface de développement dans un projet web conçu avec le framework Flask en Python, réalisé en équipe dans le cadre d’un projet de type administration d’articles pour un site de vente de meubles. Ce module permet à un administrateur de consulter les commentaires associés à un article donné, en extraire les informations principales, et afficher un récapitulatif directement dans une page HTML dynamique.</p>
                         <br>
-                        <p>L’interface correspond au fichier admin_commentaire.py, situé dans le dossier controllers, ce qui reflète une structuration conforme à l’architecture MVC. Cette structure est visible dans l’arborescence à gauche, où les composants du modèle, de la vue et du contrôleur sont clairement séparés. Le code de droite illustre la définition d’une route Flask à l’aide d’un Blueprint, avec une logique de traitement associée à la consultation des commentaires d’un meuble identifié par son id.</p>
+                        <p>L’interface correspond au fichier admin_commentaire.py, situé dans le dossier controllers, ce qui reflète une structuration conforme à l’architecture MVC. MVC est un modèle d’organisation du code qui sépare la logique métier (Modèle), l’affichage (Vue) et les interactions utilisateur (Contrôleur). Cette structure est visible dans l’arborescence à gauche, où les composants du modèle, de la vue et du contrôleur sont clairement séparés. Le code de droite illustre la définition d’une route Flask à l’aide d’un Blueprint, avec une logique de traitement associée à la consultation des commentaires d’un meuble identifié par son id.</p>
                         <br>
                         <p>Le code met en œuvre plusieurs fonctionnalités essentielles :</p>
                         <br>
@@ -61,7 +61,9 @@
                             <li>Une troisième requête utilise COUNT() pour obtenir le nombre total de commentaires sur l’article, utilisé dans l’interface comme indicateur synthétique.</li>
                         </ul>
                         <br>
-                        <p>Ces données sont ensuite transmises à un template HTML via la fonction render_template. Le moteur Jinja2 permet alors d’afficher dynamiquement les informations récupérées, en adaptant l’interface selon l’article consulté.</p>
+                        <p>Ces données sont ensuite transmises à un template HTML via la fonction render_template. Un template HTML est un fichier de structure de page web contenant des balises dynamiques ; il est complété automatiquement avec des données avant d’être envoyé au navigateur.</p>
+                        <br>
+                        <p>C’est le moteur de templates Jinja2 de Flask qui permet cette dynamique. Jinja2 est un moteur de rendu qui permet d’intégrer du code Python dans des pages HTML, via des balises comme {{ }} ou {% %}. Il permet ainsi de générer des pages personnalisées selon les données fournies.</p>
                         <br>
                         <p>La gestion des paramètres (via request.args.get) et l’usage de SQL paramétré garantissent la sécurité de l’application (contre les injections SQL notamment). De plus, le découpage du traitement en plusieurs requêtes rend le code plus modulaire, lisible et facilement maintenable. Cette organisation s’appuie sur une bonne maîtrise des structures MVC, des modèles de requêtes SQL, et des principes d’intégration backend-frontend.</p>
                         <br>
