@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure 2 - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour au portfolio
+                </a>
+                <div class="logo">Figure 2 : Test Unitaire PuissanceX</div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="figure-section">
+                <div class="figure-header">
+                    <h1 class="figure-title">Figure 2</h1>
+                    <p class="figure-subtitle">Test Unitaire PuissanceX</p>
+                </div>
+                
+                <div class="image-container">
+                    <div class="placeholder-image">
+                      <img src="Figure2.png" alt="Figure 2- Test Unitaire PuissanceX" class="figure-image">
+                    </div>
+              
+                    
+                </div>
+            </section>
+ 
+            <section class="description-section">
+                <div class="description-header">
+                    <h2 class="description-title">
+                        <i class="fas fa-file-alt" style="margin-right: 0.5rem; color: var(--accent-color);"></i>
+                        Description de l'image
+                    </h2>
+                </div>
+
+                <div class="description-content">
+                    <div class="description-block">
+                        <h3>Commentaire</h3>
+                        <p>
+                            La figure 2 est une capture d’écran d’un fichier de tests unitaires réalisé en Java avec la bibliothèque JUnit, dans le cadre du développement du jeu PuissanceX, un projet codé en équipe en suivant les principes de l’architecture MVC. Ce projet visait à créer une variante du Puissance 4, intégralement en Java, avec une séparation claire entre les couches modèle, vue et contrôleur. Le modèle gère les données et les règles du jeu, la vue s’occupe de l’affichage à l’écran, et le contrôleur fait le lien entre les deux en réagissant aux actions de l’utilisateur. Cette manière d’organiser un projet permet de rendre le code plus clair, mieux structuré et plus facile à faire évoluer. La figure met en évidence la partie « modèle », testée automatiquement pour vérifier la validité de certaines règles du jeu.</p> <br>
+
+
+                        <p>LA première partie du code  contient le test testIsColumnFull(), qui vérifie que les colonnes du plateau sont considérées comme vides au début, puis pleines une fois qu’elles sont remplies. Cette méthode simule l’ajout de pions et teste à chaque étape si le comportement attendu est respecté. Cela permet de s’assurer que la logique d’occupation du plateau fonctionne, ce qui est essentiel dans un PuissanceX, c'est une variante du puissance 4 avec les dimensions de la grille rentrées par l'utilisateur et le nombre de pions à aligner pour gagner.</p> <br>
+
+                        <p>La suite du code, testComputeValidCells(), vérifie la détection des cellules jouables sur le plateau. Le test contrôle que seules les cellules du bas sont valides au début, et qu’une cellule déjà occupée n’est plus considérée comme disponible. Cela démontre la capacité du modèle à gérer les règles de placement selon la gravité, un élément clé du gameplay.</p>  <br>
+
+                        <p>En parallèle du code, la partie inférieure de la figure montre la console de test intégrée à l'environnement de développement. Elle indique que les tests ont été correctement exécutés, tous passés avec succès. Cela prouve que les méthodes testées sont à la fois opérationnelles et couvertes automatiquement.</p> <br>
+
+                        <p>La figure permet également de mettre en évidence un outil essentiel dans la démarche qualité : la couverture de code. Sur la partie gauche de l'écran, les pourcentages affichés pour chaque dossier (par exemple : 100% dans model) indiquent le niveau de couverture obtenu après exécution des tests. Cet indicateur permet d'identifier quelles parties du code sont bien testées et lesquelles pourraient être améliorées. Dans notre cas, cela nous a permis de renforcer certains tests pour couvrir des cas limites ou des comportements inattendus. Utiliser un outil de coverage est donc un excellent moyen d'optimiser progressivement la fiabilité de l'application, tout en gardant une vision objective du travail accompli.</p> <br>
+
+                        <p>Pour mettre en œuvre ces tests, nous avons utilisé les outils de test JUnit avec des assertions telles que assertTrue, assertFalse et assertEquals. Une assertion est une instruction qui permet de vérifier automatiquement qu’un résultat est conforme à ce qu’on attend. Cela permet de détecter automatiquement une erreur dans le programme sans avoir à tout vérifier manuellement. Les tests ont été écrits de manière systématique, avec des boucles sur toutes les colonnes et lignes du plateau, afin de garantir une couverture complète. Ce travail de test reflète une bonne maîtrise des techniques de validation logicielle et renforce la fiabilité du projet global.</p> <br>
+
+                        <p>Ce travail m’a permis de mobiliser plusieurs savoirs : la modélisation orientée objet, les tests unitaires en Java avec JUnit, les règles de fonctionnement d’un jeu à grille et l’utilisation d’outils de mesure de qualité de code. Il a également mis en œuvre plusieurs savoir-faire : écrire des tests automatisés robustes, vérifier le respect de règles métier dans un modèle, exploiter un outil de coverage pour améliorer les tests, et interpréter les résultats d’exécution pour valider la qualité du code produit.</p> <br>
+
+                        
+
+                        <p>En conclusion, cette figure témoigne d’une maîtrise réelle des tests unitaires dans un projet orienté objet. Elle prouve la capacité à valider de façon autonome des fonctionnalités métier complexes, à structurer du code de test propre et à s’appuyer sur des outils d’analyse (comme la couverture de code) pour renforcer la qualité du projet.</p> <br>
+                        </p>
+                      </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
+

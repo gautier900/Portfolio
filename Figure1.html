@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure 1 - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour au portfolio
+                </a>
+                <div class="logo">Figure 1 : Gestion des commentaires côté administrateur</div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="figure-section">
+                <div class="figure-header">
+                    <h1 class="figure-title">Figure 1</h1>
+                    <p class="figure-subtitle">Interface utilisateur du système de gestion</p>
+                </div>
+                
+                <div class="image-container">
+                    <div class="placeholder-image">
+                      <img src="Figure1.png" alt="Figure 1 - Interface du projet" class="figure-image">
+                    </div>
+              
+                    
+                </div>
+            </section>
+
+            <section class="description-section">
+                <div class="description-header">
+                    <h2 class="description-title">
+                        <i class="fas fa-file-alt" style="margin-right: 0.5rem; color: var(--accent-color);"></i>
+                        Description de l'image
+                    </h2>
+                </div>
+
+                <div class="description-content">
+                    <div class="description-block">
+                        <h3>Commentaire</h3>
+                        <p>
+                            La figure présentée est une capture d’écran d’une interface de développement dans un projet web conçu avec le framework Flask en Python, réalisé en équipe dans le cadre d’un projet de type administration d’articles pour un site de vente de meubles. Ce module permet à un administrateur de consulter les commentaires associés à un article donné, en extraire les informations principales, et afficher un récapitulatif directement dans une page HTML dynamique.</p>
+                        <br>
+                        <p>L’interface correspond au fichier admin_commentaire.py, situé dans le dossier controllers, ce qui reflète une structuration conforme à l’architecture MVC. Cette structure est visible dans l’arborescence à gauche, où les composants du modèle, de la vue et du contrôleur sont clairement séparés. Le code de droite illustre la définition d’une route Flask à l’aide d’un Blueprint, avec une logique de traitement associée à la consultation des commentaires d’un meuble identifié par son id.</p>
+                        <br>
+                        <p>Le code met en œuvre plusieurs fonctionnalités essentielles :</p>
+                        <br>
+                        <ul>
+                            <li>Une première requête SQL permet de récupérer tous les commentaires liés à l’article, triés par date de publication décroissante, en joignant les informations de l’utilisateur (pseudo). Cela permet un affichage structuré et informatif côté vue.</li>
+                            <li>Une deuxième requête extrait les informations principales du meuble (nom, description, prix), nécessaires pour contextualiser la consultation.</li>
+                            <li>Une troisième requête utilise COUNT() pour obtenir le nombre total de commentaires sur l’article, utilisé dans l’interface comme indicateur synthétique.</li>
+                        </ul>
+                        <br>
+                        <p>Ces données sont ensuite transmises à un template HTML via la fonction render_template. Le moteur Jinja2 permet alors d’afficher dynamiquement les informations récupérées, en adaptant l’interface selon l’article consulté.</p>
+                        <br>
+                        <p>La gestion des paramètres (via request.args.get) et l’usage de SQL paramétré garantissent la sécurité de l’application (contre les injections SQL notamment). De plus, le découpage du traitement en plusieurs requêtes rend le code plus modulaire, lisible et facilement maintenable. Cette organisation s’appuie sur une bonne maîtrise des structures MVC, des modèles de requêtes SQL, et des principes d’intégration backend-frontend.</p>
+                        <br>
+                        <p>Pour réaliser cette partie, nous avons modélisé la base de données avec les entités Meuble, Commentaire et Utilisateur, reliées par des clés étrangères. Seuls les commentaires liés à un meuble précis sont extraits, et seules les informations nécessaires sont affichées, ce qui participe à l’optimisation de l’affichage.</p>
+                        <br>
+                        <p>Ce travail m’a permis de mobiliser plusieurs savoirs : la création d’un contrôleur Flask structuré, l’utilisation de requêtes SQL avancées (jointure, agrégation, tri), le passage sécurisé de paramètres HTTP, et la communication entre back-end et front-end via un moteur de templates. Il illustre aussi plusieurs savoir-faire : organiser un projet selon MVC, sécuriser les interactions avec une base de données, et créer une page HTML personnalisée à partir de données dynamiques.</p>
+                      </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
